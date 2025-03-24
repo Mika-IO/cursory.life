@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🌱 cursory.life - Conexões genuínas</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/easymde/dist/easymde.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/easymde/dist/easymde.min.js"></script>
+</head>
+<body class="bg-neutral-50">
+    <!-- Cabeçalho Simplificado -->
+    <header class="bg-white border-b">
+        <nav class="max-w-3xl mx-auto px-4 py-3">
+          <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-3">
+            <!-- Logo + Icons -->
+            <div class="flex items-center justify-between">
+              <a href="/" class="text-2xl font-semibold text-green-600 hover:text-green-700">
+                🌱 cursory.life
+              </a>
+              <div class="md:hidden flex items-center gap-3">
+                <a href="#" class="text-gray-600 hover:text-green-600">
+                  <i class="fa-regular fa-user text-xl"></i>
+                </a>
+                <a href="#" class="text-gray-600 hover:text-green-600">
+                  <i class="fa-regular fa-message text-xl"></i>
+                </a>
+              </div>
+            </div>
+      
+            <!-- Search Bar -->
+            <form class="w-full md:w-auto">
+              <input
+                type="text"
+                placeholder="Search..."
+                class="w-full md:w-72 border rounded-lg px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-green-500"
+              />
+            </form>
+      
+            <!-- Desktop Icons -->
+            <div class="hidden md:flex items-center gap-4">
+              <a href="#" class="text-gray-600 hover:text-green-600">
+                <i class="fa-regular fa-user text-xl"></i>
+              </a>
+              <a href="#" class="text-gray-600 hover:text-green-600">
+                <i class="fa-regular fa-message text-xl"></i>
+              </a>
+            </div>
+          </div>
+        </nav>
+    </header>
+      
+      
+
+    <!-- Conteúdo Principal -->
+    <main class="max-w-3xl mx-auto px-4 py-6">
+        <div class="flex gap-3 items-center">
+            <button
+              id="togglePostForm"
+              class="text-lg w-full mb-5 bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700"
+            >
+              Create Post
+            </button>
+            
+          </div>
+        <!-- Editor de Posts -->
+        <section id="newPostSection" class="mb-8 hidden bg-white rounded-lg border shadow-sm">
+            <form id="newPostForm" class="p-4">
+                <div id="editorContainer">
+                    <textarea id="postContent" placeholder="Write your post in Markdown..."></textarea>
+                </div>
+                <div class="mt-4 flex justify-between items-center">
+                    <span class="text-sm text-gray-500" id="charCounter">0/20000</span>
+                    <div class="space-x-2">
+                        <button id="cancelPostBtn" type="button" class="px-4 border py-2 text-gray-600 hover:bg-gray-100 rounded text-sm">
+                            Cancel
+                        </button>
+                        <button type="submit" class="px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700 text-sm">
+                            Post
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </section>
+
+
+        <!-- Post Principal -->
+        <article class="bg-white rounded-lg border shadow-sm mb-4">
+            <!-- Cabeçalho do Post -->
+            <div class="p-4 border-b">
+                <div class="flex items-center gap-2 text-sm">
+                    <span class="font-medium text-green-600">@dev_frontend</span>
+                    <span class="text-gray-400">·</span>
+                    <span class="text-gray-500">10 minutes ago</span>
+                </div>
+                <h1 class="mt-2 text-lg font-semibold text-gray-900">
+                    Why is React's animation community so good and Angular's so bad?
+                </h1>
+            </div>
+
+            <!-- Conteúdo do Post -->
+            <div class="m-5 text-sm">
+                <p>I'll just give one example of a lib: React: <a href="https://www.reactbits.de/" class="text-green-600 hover:underline">https://www.reactbits.de/</a> which is very good! But I can't find anything of that level for Angular...</p>            </div>
+
+            <!-- Interações -->
+            <div class="px-4 py-2 border-t flex items-center gap-6 text-sm">
+                <div class="flex items-center gap-1 text-gray-500">
+                    <button class="p-1.5 hover:bg-gray-100 rounded">
+                        <i class="fa-regular fa-comment"></i>
+                    </button>
+                    <span>7 comments</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <span class="font-medium">42</span>
+                    <button class="p-1.5 hover:text-green-600">
+                        <i class="fa-solid fa-arrow-up"></i>
+                    </button>
+
+                    <button class="p-1.5 hover:text-red-600">
+                        <i class="fa-solid fa-arrow-down"></i>
+                    </button>
+                </div>
+            </div>
+        </article>
+
+        <article class="bg-white rounded-lg border shadow-sm mb-4">
+            <div class="p-4 border-b">
+                <div class="flex items-center gap-2 text-sm">
+                <span class="font-medium text-green-600">@money_mindset</span>
+                <span class="text-gray-400">·</span>
+                <span class="text-gray-500">3 days ago</span>
+                </div>
+                <h1 class="mt-2 text-lg font-semibold text-gray-900">
+                Saving is boring, but it works
+                </h1>
+            </div>
+            <div class="m-5 text-sm">
+                <p>
+                Most finance advice online is about investing, but honestly, the best thing I ever did was automate savings. It’s not exciting, but after a year I had emergency cash and peace of mind.
+                </p>
+            </div>
+            <div class="px-4 py-2 border-t flex items-center gap-6 text-sm">
+                <div class="flex items-center gap-1 text-gray-500">
+                <button class="p-1.5 hover:bg-gray-100 rounded">
+                    <i class="fa-regular fa-comment"></i>
+                </button>
+                <span>14 replies</span>
+                </div>
+                <div class="flex items-center gap-2">
+                <button class="p-1.5 hover:text-green-600">
+                    <i class="fa-solid fa-arrow-up"></i>
+                </button>
+                <span class="font-medium">47</span>
+                <button class="p-1.5 hover:text-red-600">
+                    <i class="fa-solid fa-arrow-down"></i>
+                </button>
+                </div>
+            </div>
+        </article>
+
+        <article class="bg-white rounded-lg border shadow-sm mb-4">
+            <div class="p-4 border-b">
+              <div class="flex items-center gap-2 text-sm">
+                <span class="font-medium text-green-600">@joanna_daily</span>
+                <span class="text-gray-400">·</span>
+                <span class="text-gray-500">1 day ago</span>
+              </div>
+              <h1 class="mt-2 text-lg font-semibold text-gray-900">
+                Morning walks are underrated
+              </h1>
+            </div>
+            <div class="m-5 text-sm">
+              <p>
+                I started walking every morning with no phone or music. Just me, the road, and my thoughts. I didn’t expect it to be so meditative. Highly recommend to anyone stuck in routines.
+              </p>
+            </div>
+            <div class="px-4 py-2 border-t flex items-center gap-6 text-sm">
+              <div class="flex items-center gap-1 text-gray-500">
+                <button class="p-1.5 hover:bg-gray-100 rounded">
+                  <i class="fa-regular fa-comment"></i>
+                </button>
+                <span>5 replies</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <button class="p-1.5 hover:text-green-600">
+                  <i class="fa-solid fa-arrow-up"></i>
+                </button>
+                <span class="font-medium">31</span>
+                <button class="p-1.5 hover:text-red-600">
+                  <i class="fa-solid fa-arrow-down"></i>
+                </button>
+              </div>
+            </div>
+        </article>
+        
+        <article class="bg-white rounded-lg border shadow-sm mb-4">
+            <div class="p-4 border-b">
+              <div class="flex items-center gap-2 text-sm">
+                <span class="font-medium text-green-600">@quietmind</span>
+                <span class="text-gray-400">·</span>
+                <span class="text-gray-500">8 hours ago</span>
+              </div>
+              <h1 class="mt-2 text-lg font-semibold text-gray-900">
+                Taking weekends offline changed my anxiety levels
+              </h1>
+            </div>
+            <div class="m-5 text-sm">
+              <p>
+                Just wanted to share a small experiment: no phone, no social media on weekends. After 3 weeks, I feel calmer and more present. It wasn’t easy at first, but now I look forward to it.
+              </p>
+            </div>
+            <div class="px-4 py-2 border-t flex items-center gap-6 text-sm">
+              <div class="flex items-center gap-1 text-gray-500">
+                <button class="p-1.5 hover:bg-gray-100 rounded">
+                  <i class="fa-regular fa-comment"></i>
+                </button>
+                <span>18 replies</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <button class="p-1.5 hover:text-green-600">
+                  <i class="fa-solid fa-arrow-up"></i>
+                </button>
+                <span class="font-medium">89</span>
+                <button class="p-1.5 hover:text-red-600">
+                  <i class="fa-solid fa-arrow-down"></i>
+                </button>
+              </div>
+            </div>
+        </article>
+       
+        <article class="bg-white rounded-lg border shadow-sm mb-4">
+            <div class="p-4 border-b">
+              <div class="flex items-center gap-2 text-sm">
+                <span class="font-medium text-green-600">@lifelong_learner</span>
+                <span class="text-gray-400">·</span>
+                <span class="text-gray-500">5 hours ago</span>
+              </div>
+              <h1 class="mt-2 text-lg font-semibold text-gray-900">
+                Should schools teach emotional intelligence?
+              </h1>
+            </div>
+            <div class="m-5 text-sm">
+              <p>
+                We spend years learning math and grammar, but barely touch emotional regulation, communication, or empathy. I feel like EQ is just as essential as IQ in today’s world. Thoughts?
+              </p>
+            </div>
+            <div class="px-4 py-2 border-t flex items-center gap-6 text-sm">
+              <div class="flex items-center gap-1 text-gray-500">
+                <button class="p-1.5 hover:bg-gray-100 rounded">
+                  <i class="fa-regular fa-comment"></i>
+                </button>
+                <span>9 replies</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <button class="p-1.5 hover:text-green-600">
+                  <i class="fa-solid fa-arrow-up"></i>
+                </button>
+                <span class="font-medium">54</span>
+                <button class="p-1.5 hover:text-red-600">
+                  <i class="fa-solid fa-arrow-down"></i>
+                </button>
+              </div>
+            </div>
+        </article>
+
+        <article class="bg-white rounded-lg border shadow-sm mb-4">
+            <div class="p-4 border-b">
+              <div class="flex items-center gap-2 text-sm">
+                <span class="font-medium text-green-600">@deep_thinker</span>
+                <span class="text-gray-400">·</span>
+                <span class="text-gray-500">2 hours ago</span>
+              </div>
+              <h1 class="mt-2 text-lg font-semibold text-gray-900">
+                Can boredom be a gateway to creativity?
+              </h1>
+            </div>
+            <div class="m-5 text-sm">
+              <p>
+                I’ve been wondering if our constant fight against boredom is actually blocking something deeper. When I stop scrolling and let myself feel bored, new ideas start to surface. Anyone else experienced this?
+              </p>
+            </div>
+            <div class="px-4 py-2 border-t flex items-center gap-6 text-sm">
+              <div class="flex items-center gap-1 text-gray-500">
+                <button class="p-1.5 hover:bg-gray-100 rounded">
+                  <i class="fa-regular fa-comment"></i>
+                </button>
+                <span>12 replies</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <button class="p-1.5 hover:text-green-600">
+                  <i class="fa-solid fa-arrow-up"></i>
+                </button>
+                <span class="font-medium">67</span>
+                <button class="p-1.5 hover:text-red-600">
+                  <i class="fa-solid fa-arrow-down"></i>
+                </button>
+              </div>
+            </div>
+        </article>
+                      
+    
+    </main>
+
+    <script>
+        // Inicializar Editor Markdown
+        const easyMDE = new EasyMDE({
+            element: document.getElementById('postContent'),
+            spellChecker: false,
+            placeholder: 'Write your post...',
+            toolbar: ['bold', 'italic', 'heading', '|', 'quote', 'code', '|', 'preview'],
+            minHeight: '150px'
+        });
+
+        // Contador de caracteres
+        const charCounter = document.getElementById('charCounter');
+        easyMDE.codemirror.on('change', () => {
+            const length = easyMDE.value().length;
+            charCounter.textContent = `${length}/20000`;
+        });
+
+        // Renderização Markdown
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('.prose').forEach(el => {
+                el.innerHTML = marked.parse(el.textContent);
+            });
+        });
+
+        // Toggle de respostas
+        document.querySelectorAll('[data-comment-toggle]').forEach(button => {
+            button.addEventListener('click', () => {
+                const editor = button.closest('.comment').nextElementSibling;
+                editor.classList.toggle('hidden');
+            });
+        });
+
+        const toggleBtn = document.getElementById('togglePostForm');
+        const postSection = document.getElementById('newPostSection');
+        const cancelBtn = document.getElementById('cancelPostBtn');
+
+        toggleBtn.addEventListener('click', () => {
+            postSection.classList.toggle('hidden');
+        });
+
+        cancelBtn.addEventListener('click', () => {
+            postSection.classList.add('hidden');
+        });
+    </script>
+</body>
+</html>
