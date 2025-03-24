@@ -47,6 +47,9 @@
               <a href="#" class="text-gray-600 hover:text-green-600">
                 <i class="fa-regular fa-message text-xl"></i>
               </a>
+              <a href="#" id="togglePostForm" class="text-gray-600 hover:text-green-600">
+                <i class="fa-regular fa-pen-to-square text-xl"></i>
+              </a>
             </div>
           </div>
         </nav>
@@ -56,15 +59,6 @@
 
     <!-- Conteúdo Principal -->
     <main class="max-w-3xl mx-auto px-4 py-6">
-        <div class="flex gap-3 items-center">
-            <button
-              id="togglePostForm"
-              class="text-lg w-full mb-5 bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700"
-            >
-              Create Post
-            </button>
-            
-          </div>
         <!-- Editor de Posts -->
         <section id="newPostSection" class="mb-8 hidden bg-white rounded-lg border shadow-sm">
             <form id="newPostForm" class="p-4">
@@ -87,21 +81,64 @@
 
 
         <!-- Post Principal -->
+
         <article class="bg-white rounded-lg border shadow-sm mb-4">
             <!-- Cabeçalho do Post -->
-            <div class="p-4 border-b">
+            <div class="p-2 border-b">
+              <div class="flex items-center gap-2 text-sm">
+                <i class="fa-solid fa-thumbtack text-green-600"></i>
+                <span class="font-medium text-green-600">@mikaiodev</span>
+                <span class="text-gray-400">·</span>
+                <span class="text-gray-500">Pinned</span>
+              </div>
+            </div>
+          
+            <!-- Conteúdo do Post -->
+            <div class="m-5 text-sm">
+              <h1 class="mt-2 text-lg font-semibold text-gray-900">
+                Life is too ephemeral to waste time!
+              </h1>
+              <p class="mt-2">
+                Cursory.life is a text-only social platform for calm and intentional interaction — no brain rot, no FOMO, no fake metrics. Just real conversations, shared knowledge, and meaningful human connection.
+              </p>
+            </div>
+          
+            <!-- Interações -->
+            <div class="px-4 py-2 border-t flex items-center gap-6 text-sm">
+              <div class="flex items-center gap-1 text-gray-500">
+                <button class="p-1.5 hover:bg-gray-100 rounded">
+                  <i class="fa-regular fa-comment"></i>
+                </button>
+                <span>23 comments</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="font-medium">108</span>
+                <button class="p-1.5 hover:text-green-600">
+                  <i class="fa-solid fa-arrow-up"></i>
+                </button>
+                <button class="p-1.5 hover:text-red-600">
+                  <i class="fa-solid fa-arrow-down"></i>
+                </button>
+              </div>
+            </div>
+          </article>
+          
+        <article class="bg-white rounded-lg border shadow-sm mb-4">
+            <!-- Cabeçalho do Post -->
+            <div class="p-2 border-b">
                 <div class="flex items-center gap-2 text-sm">
                     <span class="font-medium text-green-600">@dev_frontend</span>
                     <span class="text-gray-400">·</span>
                     <span class="text-gray-500">10 minutes ago</span>
                 </div>
-                <h1 class="mt-2 text-lg font-semibold text-gray-900">
-                    Why is React's animation community so good and Angular's so bad?
-                </h1>
+                
             </div>
 
             <!-- Conteúdo do Post -->
             <div class="m-5 text-sm">
+                <h1 class="mt-2 text-lg font-semibold text-gray-900">
+                    Why is React's animation community so good and Angular's so bad?
+                </h1>
                 <p>I'll just give one example of a lib: React: <a href="https://www.reactbits.de/" class="text-green-600 hover:underline">https://www.reactbits.de/</a> which is very good! But I can't find anything of that level for Angular...</p>            </div>
 
             <!-- Interações -->
@@ -126,17 +163,18 @@
         </article>
 
         <article class="bg-white rounded-lg border shadow-sm mb-4">
-            <div class="p-4 border-b">
+            <div class="p-2 border-b">
                 <div class="flex items-center gap-2 text-sm">
                 <span class="font-medium text-green-600">@money_mindset</span>
                 <span class="text-gray-400">·</span>
                 <span class="text-gray-500">3 days ago</span>
                 </div>
-                <h1 class="mt-2 text-lg font-semibold text-gray-900">
-                Saving is boring, but it works
-                </h1>
+          
             </div>
             <div class="m-5 text-sm">
+                <h1 class="mt-2 text-lg font-semibold text-gray-900">
+                    Saving is boring, but it works
+                    </h1>
                 <p>
                 Most finance advice online is about investing, but honestly, the best thing I ever did was automate savings. It’s not exciting, but after a year I had emergency cash and peace of mind.
                 </p>
@@ -161,17 +199,17 @@
         </article>
 
         <article class="bg-white rounded-lg border shadow-sm mb-4">
-            <div class="p-4 border-b">
+            <div class="p-2 border-b">
               <div class="flex items-center gap-2 text-sm">
                 <span class="font-medium text-green-600">@joanna_daily</span>
                 <span class="text-gray-400">·</span>
                 <span class="text-gray-500">1 day ago</span>
               </div>
-              <h1 class="mt-2 text-lg font-semibold text-gray-900">
-                Morning walks are underrated
-              </h1>
             </div>
             <div class="m-5 text-sm">
+                <h1 class="mt-2 text-lg font-semibold text-gray-900">
+                    Morning walks are underrated
+                  </h1>
               <p>
                 I started walking every morning with no phone or music. Just me, the road, and my thoughts. I didn’t expect it to be so meditative. Highly recommend to anyone stuck in routines.
               </p>
@@ -196,17 +234,17 @@
         </article>
         
         <article class="bg-white rounded-lg border shadow-sm mb-4">
-            <div class="p-4 border-b">
+            <div class="p-2 border-b">
               <div class="flex items-center gap-2 text-sm">
                 <span class="font-medium text-green-600">@quietmind</span>
                 <span class="text-gray-400">·</span>
                 <span class="text-gray-500">8 hours ago</span>
               </div>
-              <h1 class="mt-2 text-lg font-semibold text-gray-900">
-                Taking weekends offline changed my anxiety levels
-              </h1>
             </div>
             <div class="m-5 text-sm">
+                <h1 class="mt-2 text-lg font-semibold text-gray-900">
+                    Taking weekends offline changed my anxiety levels
+                  </h1>
               <p>
                 Just wanted to share a small experiment: no phone, no social media on weekends. After 3 weeks, I feel calmer and more present. It wasn’t easy at first, but now I look forward to it.
               </p>
@@ -231,17 +269,17 @@
         </article>
        
         <article class="bg-white rounded-lg border shadow-sm mb-4">
-            <div class="p-4 border-b">
+            <div class="p-2 border-b">
               <div class="flex items-center gap-2 text-sm">
                 <span class="font-medium text-green-600">@lifelong_learner</span>
                 <span class="text-gray-400">·</span>
                 <span class="text-gray-500">5 hours ago</span>
               </div>
-              <h1 class="mt-2 text-lg font-semibold text-gray-900">
-                Should schools teach emotional intelligence?
-              </h1>
             </div>
             <div class="m-5 text-sm">
+                <h1 class="mt-2 text-lg font-semibold text-gray-900">
+                Should schools teach emotional intelligence?
+                </h1>
               <p>
                 We spend years learning math and grammar, but barely touch emotional regulation, communication, or empathy. I feel like EQ is just as essential as IQ in today’s world. Thoughts?
               </p>
@@ -266,17 +304,18 @@
         </article>
 
         <article class="bg-white rounded-lg border shadow-sm mb-4">
-            <div class="p-4 border-b">
+            <div class="p-2 border-b">
               <div class="flex items-center gap-2 text-sm">
                 <span class="font-medium text-green-600">@deep_thinker</span>
                 <span class="text-gray-400">·</span>
                 <span class="text-gray-500">2 hours ago</span>
               </div>
-              <h1 class="mt-2 text-lg font-semibold text-gray-900">
-                Can boredom be a gateway to creativity?
-              </h1>
+             
             </div>
             <div class="m-5 text-sm">
+                <h1 class="mt-2 text-lg font-semibold text-gray-900">
+                    Can boredom be a gateway to creativity?
+                    </h1>
               <p>
                 I’ve been wondering if our constant fight against boredom is actually blocking something deeper. When I stop scrolling and let myself feel bored, new ideas start to surface. Anyone else experienced this?
               </p>
